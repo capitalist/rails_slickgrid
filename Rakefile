@@ -32,7 +32,7 @@ task :build do
 end
  
 task :release => :build do
-  system "gem push rails_slickgrid-#{RailsSlickgrid::VERSION}"
+  system "gem push rails_slickgrid-#{RailsSlickgrid::VERSION}.gem"
 end
 
 require 'rails_slickgrid/utils'
@@ -54,5 +54,12 @@ task :download_slickgrid do
 
   stylesheets.merge(javascripts).each do |url,path|
     RailsSlickgrid::Utils.curl url, '-o', path.gsub(/:name/,url.split('/').last)
+  end
+end
+
+desc 'Convert coffee scripts in templates to js'
+task :brew_coffee do
+  Dir.glob('**/*.coffee').each do |fn|
+    `coffee --bare -c #{fn}` 
   end
 end

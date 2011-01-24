@@ -2,7 +2,10 @@
 
 Rails Slickgrid is an effort to make the fast javascript grid/spreadsheet [SlickGrid](https://github.com/mleibman/SlickGrid) easier to use in rails.
 
-It currently only generates the static assets into your `javascripts` and `stylesheets` but automatic grid generation is under development.
+## What It Can Do
+1. Generates the static assets for slickgrid into your public directory
+2. Provides a method to include these assets in your layout
+3. Generates a slickgrid from an array of hashes
 
 ## Installation
 
@@ -10,6 +13,11 @@ It currently only generates the static assets into your `javascripts` and `style
 2. `bundle install`
 3. `rails generate rails_slickgrid:install`
 4. In your layout or view call `slickgrid_assets`
+
+## SlickGrid Dependencies
+
+1. You need to have jQuery loaded
+2. You need to have jQuery UI as SlickGrid uses it
 
 ## TODO
 1. Automatic grid generation
@@ -21,4 +29,5 @@ It currently only generates the static assets into your `javascripts` and `style
 ## Copyright
 
 SlickGrid itself is Copyright (c) 2010 Michael Leibman, http://github.com/mleibman/slickgrid
+
 Rails Slickgrid is Copyright (c) 2011 Joe Martinez, https://github.com/capitalist/rails_slickgrid
