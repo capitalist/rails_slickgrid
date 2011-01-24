@@ -35,15 +35,10 @@ module RailsSlickgrid
     def slickgrid_function(data)
       "\n" +
       File.read( File.expand_path("../templates/grid.js", __FILE__) ).
-	gsub(/\'COLUMNS_MARKER\'/,columns_from_data(data)).
-	gsub(/\'DATA_MARKER\'/, data.to_json) +
+	gsub(/\'COLUMNS_MARKER\'/,ColumnExtractor.from_data(data).to_json).
+	gsub(/\'DATA_MARKER\'/, DataExtractor.from_data(data).to_json) +
       "\n"
     end
 
-    def columns_from_data(data)
-      data.first.keys.collect do |kee|
-	{:id => kee, :name => kee.to_s.humanize, :field => kee}
-      end.to_json
-    end
   end
 end

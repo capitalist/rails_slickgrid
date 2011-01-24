@@ -15,6 +15,6 @@ describe "Slickgrid" do
 
   it "generates a slickgrid" do
     visit root_path
-    page.should have_xpath("//div[@class='slickgrid']")
+    page.should have_xpath("//div[@id='slickgrid']")
   end
 end
