@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.summary = "Allows easy rendering of Slickgrids in Rails 3 views."
   s.description = ""
   s.files = Dir["lib/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
-  s.version = "0.0.2"
+  s.version = "0.0.3"
 
   s.authors = ['Joe Martinez']
   s.email = 'joe@joemartinez.name'
