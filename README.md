@@ -14,10 +14,15 @@ Rails Slickgrid is an effort to make the fast javascript grid/spreadsheet [Slick
 3. `rails generate rails_slickgrid:install`
 4. In your layout or view call `slickgrid_assets`
 
+
 ## SlickGrid Dependencies
 
 1. You need to have jQuery loaded
 2. You need to have jQuery UI as SlickGrid uses it
+
+## Usage
+
+After installing, in your view simply `slickgrid(data)` where data is an array of hashes.
 
 ## TODO
 1. Automatic grid generation
