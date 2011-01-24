@@ -5,7 +5,7 @@ Rails Slickgrid is an effort to make the fast javascript grid/spreadsheet [Slick
 ## What It Can Do
 1. Generates the static assets for slickgrid into your public directory
 2. Provides a method to include these assets in your layout
-3. Generates a slickgrid from an array of hashes
+3. Generates a slickgrid from an array of hashes or records(ActiveRecord)
 
 ## Installation
 
@@ -22,7 +22,7 @@ Rails Slickgrid is an effort to make the fast javascript grid/spreadsheet [Slick
 
 ## Usage
 
-After installing, in your view simply `slickgrid(data)` where data is an array of hashes.
+After installing, in your view simply `slickgrid(records)`
 
 ## TODO
 1. Automatic grid generation
